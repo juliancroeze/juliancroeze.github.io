@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian Croeze</title>
+    <link rel="icon" href="../img/logo.png">
+
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .bg-img {
+            background: url('img/blob1.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        .card-img{
+            background: url('img/card.png') no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+<body class="bg-mainbg overflow-x-hidden" z-0>
+    <script>
+        AOS.init();
+    </script>
+    <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1308" height="928"></canvas></div>
+
+    <section data-aos="zoom-out" class="bg-img h-screen flex flex-col justify-center items-center">
+        <nav data-aos="fade-down" data-aos-duration="500" class="absolute md:top-5 top-0 md:w-5/6 w-full bg-navbg/50 backdrop-blur-md p-4 py-7 text-green-500 opacity-80 md:rounded-md flex justify-between items-center md:pl-10 md:pr-10">
+            <h3 class="text-xl text-primary font-bold" style="text-shadow: 1px 1px 10px #38E093;"><a href="index.html">&lt J.C &gt</a></h3>
+            <div>
+                <a class="font-bold mr-1 md:mr-5 text-primary py-3 px-4 hover:bg-cardbg hover:text-white rounded-md" href="index.html">Home</a>
+                <a class="font-bold mr-1 md:mr-5 text-primary py-3 px-4 hover:bg-cardbg hover:text-white rounded-md" href="projects.html">Projects</a>
+                <a class="font-bold mr-1 md:mr-5 text-primary py-3 px-4 hover:bg-cardbg hover:text-white rounded-md" href="mailto:croezejulian@gmail.com">Contact</a>
+            </div>
+        </nav>
+        
+        <div data-aos="fade-up" data-aos-duration="500">
+            <div class="text-white text-center">
+                <h1 class="text-2xl">Hi There, I'm</h1>
+                <h2 class="text-5xl font-bold">Julian <span style="color: #38E093; text-shadow: 1px 1px 10px #38E093;">Croeze</span></h2>
+            </div>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="mailto:croezejulian@gmail.com"><button class="bg-primary font-bold text-black px-8 py-3 rounded-md focus:outline-none hover:bg-cardbg hover:text-primary transition ease-in-out duration-500">Contact</button></a>
+                <a href="projects.html"><button class="bg-cardbg font-bold text-primary px-8 py-3 rounded-md hover:bg-cardbghover focus:outline-none transition ease-in-out duration-500">Projects</button></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section data-aos="zoom-out-up" class="flex flex-col items-center">
+        <div class="mt-20 text-center w-3/5">
+            <h1 class="text-5xl font-bold text-primary" style="text-shadow: 1px 1px 10px #38E093;">About</h1>
+            <p class="text-md font-medium text-gray-100">Ik ben Julian, een webdeveloper student uit Amersfoort, met drie jaar ervaring in het bouwen van websites. Mijn passie ligt in het ontwikkelen van efficiënte en aantrekkelijke digitale ervaringen.</p>
+
+        </div>
+    </section>
+
+    <section class=" flex flex-col items-center">
+        <div data-aos="zoom-out-up" class="mt-20 text-center">
+            <h1 class="text-5xl font-bold text-primary" style="text-shadow: 1px 1px 10px #38E093;">Skills</h1>
+            <p class="text-md font-medium text-gray-100">Hier zijn enkele van mijn vaardigheden waaraan ik de afgelopen jaren heb gewerkt.</p>
+        </div>
+        <div class="flex flex-wrap justify-center mt-4 max-w-6xl mx-auto text-gray-100">
+            <!-- Card 1 -->
+            <div data-aos="fade-right" class=" w-full md:w-1/2 lg:w-1/2 xl:w-1/2 p-4 text-center ">
+                <div class="cursor-pointer card-img bg-cardbg p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-primary">
+                    <h3 class="text-2xl">Frontend</h3>
+                    <div class="grid md:grid-cols-3 grid-cols-2 gap-4 mt-4">
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">HTML</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">CSS</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">SCSS</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">JavaScript</h4>
+                        </div>
+
+
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">Tailwind</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div data-aos="fade-left" class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 p-4 text-center">
+                <div class="cursor-pointer card-img bg-cardbg p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-primary">
+                    <h3 class="text-2xl">Backend</h3>
+                    <div class="grid md:grid-cols-3 grid-cols-2 gap-4 mt-4">
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">PHP</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">Python</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">MySQL</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">C#</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">JavaScript</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div data-aos="fade-right" class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 p-4 text-center">
+                <div class="cursor-pointer card-img bg-cardbg p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-primary">
+                    <h3 class="text-2xl">Desktop</h3>
+                    <div class="grid md:grid-cols-3 grid-cols-2 gap-4 mt-4">
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">C#</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">XAML</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">Python</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">Java</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div data-aos="fade-left" class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 p-4 text-center">
+                <div class="cursor-pointer card-img bg-cardbg p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-primary">
+                    <h3 class="text-2xl">Others</h3>
+                    <div class="grid md:grid-cols-3 grid-cols-2 gap-4 mt-4">
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">Git</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">Github</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">VS Code</h4>
+                        </div>
+
+                        <div class="p-4 rounded-md flex items-center border-2 border-primary">
+                            <i class="fas fa-check text-primary mr-2"></i>
+                            <h4 class="text-lg">Figma</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" flex flex-col items-center">
+        <div data-aos="zoom-out-up" class="mt-20 text-center">
+            <h1 class="text-5xl font-bold text-primary" style="text-shadow: 1px 1px 10px #38E093;">Experience</h1>
+            <p class="text-md font-medium text-gray-100">Mijn ervaring als Software Developer bij verschillende bedrijven.</p>
+        </div>
+    
+        <!-- Add the experience timeline here -->
+        <div class="max-w-4xl mx-auto p-4 space-y-8">
+            <!-- Experience Item 1 -->
+            <div data-aos="fade-up" class="cursor-pointer card-img p-6 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-primary">
+                <div class="flex items-start space-x-4"> <!-- Top Section -->
+                    <img src="img/roc.jpg" alt="Company 1 Logo" class="h-16 w-16 mt-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary">Software Developer Student</h3>
+                        <p class="text-gray-100">ROC Midden Nederland</p>
+                        <p class="text-gray-100">Sept 2022 - Present</p>
+                    </div>
+                </div>
+                <div class="mt-4"> <!-- Bottom Section -->
+                    <p class="text-gray-100">
+                        Worked on web development projects, including designing and implementing user interfaces.
+                    </p>
+                </div>
+            </div>
+            
+            
+            <!-- Experience Item 2 -->
+            <div data-aos="fade-up" class="cursor-pointer card-img p-6 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-primary">
+                <div class="flex items-start space-x-4"> <!-- Top Section -->
+                    <img src="img/succeedit.png" alt="Company 1 Logo" class="h-16 w-16 mt-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary">Software Developer Intern</h3>
+                        <p class="text-gray-100">Succeedit</p>
+                        <p class="text-gray-100">Aug 2023 - Jan 2024</p>
+                    </div>
+                </div>
+                <div class="mt-4"> <!-- Bottom Section -->
+                    <p class="text-gray-100">
+                        Worked on Business Central Dataverse synchronization, Microsoft Power Platform.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Add more experience items as needed -->
+        </div>
+    </section>
+    
+    <section class="mt-10 bg-mainbg flex text-center flex-col items-center py-8 px-5 text-white border-top-2" style="box-shadow: 0 -2px 4px #38E093">
+        <div class="text-2xl font-bold mb-4">Contact Me</div>
+        <p class="text-lg mb-4">Feel free to reach out and connect with me.</p>
+        <div class="flex space-x-4">
+            <a href="mailto:croezejulian@gmail.com" class="text-primary hover:underline">Email</a>
+            <a href="https://github.com/juliancroeze" class="text-primary hover:underline">GitHub</a>
+        </div>
+    </section>
+    
+
+</body>
+<script type="text/javascript" src="particles.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</html>
