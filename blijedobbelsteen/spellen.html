@@ -1,0 +1,113 @@
+<html lang="nl">
+<head>
+    <meta name="author" content="Top Tiers">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Blije Dobbelsteen</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./assets/images/logo.png">
+    <script src="https://kit.fontawesome.com/e6d99cb95a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+    <section class="navbar" id="navbar">
+        <div class="logo">
+            <a href=""><img src="./assets/images/logo.png" alt=""></a>
+        </div>
+        <div class="navbar_list">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="spellen.html" class="nav-link">Spellen</a></li>
+                <li><a href="wiezijnwij.html" class="nav-link">Wie zijn wij</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"><p>Dropdown
+              <i class="fa fa-caret-down"></i></p>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="spellen.html">Spellen</a>
+                <a href="wiezijnwij.html">Wie Zijn Wij?</a>
+                <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        <div class="background"></div>
+    </section>
+
+    <section class="home">
+        <div class="flex-container">
+            <div class="flex-box">
+                <img src="./assets/images/space-invaders-logo.png" alt="">
+                <button onclick="openPopUp()" class="btn-spel"><p>Speel!</p></button>
+            </div>
+            <div class="flex-box">
+                <img src="./assets/images/manbter.png" alt="">
+                <button onclick="openPopUp2()" class="btn-spel"><p>Speel!</p></button>
+            </div>
+        </div>
+
+        <div class="popup spel1">
+            <a onclick="closePopUp()"><i class="fa-solid fa-xmark"></i></a>
+            <div class="speluitleg">
+                <h1>Welkom bij SpaceInvaders</h1>
+                <p>Bij SpaceInvaders moet je proberen alle aliens te verslaan in uw ruimteschip. Elk level komt er een nieuwe invasie aan aliens. Je moet deze verslaan anders overleef je het niet. Op het moment dat je een alien invasie overleefd hebt ga je een level omhoog. Let op de aliens worden steeds sneller.</p>
+                <h2>Controls</h2>
+                <p><i class="fa-solid fa-w"></i>Activeer de kannonen van uw ruimtechip</p>
+                <p><i class="fa-solid fa-d"></i>Beweeg uw ruimteschip naar rechts</p>
+                <p><i class="fa-solid fa-a"></i>Beweeg uw ruimteschip naar links</p>
+                <button onclick="startGame()" class="btn-spel"><p>Ik heb de uitleg gelezen</p></button>
+            </div>
+            <div class="popup-content">
+                <iframe src="https://game.julianberle.nl/"></iframe>
+            </div>
+        </div>
+
+        <div class="popup spel2">
+            <a onclick="closePopUp()"><i class="fa-solid fa-xmark"></i></a>
+            <div class="speluitleg">
+                <h1>Welkom bij Man Beater</h1>
+                <p>Het doel in Man Beater is om de man zo vaak in elkaar te slaan om de hoogste score en hoogste highscore in 5 seconden te behalen.</p>
+                <h2>Controls</h2>
+                <p><i class="fa-solid fa-arrow-up"></i>Klik zoveel keer mogelijk op de knop om de man te slaan.</p>
+                <button onclick="startGame2()" class="btn-spel"><p>Ik heb de uitleg gelezen</p></button>
+            </div>
+            <div class="popup-content">
+                <iframe src="http://574930.klas4s22.mid-ica.nl/game-level2/index.html"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <a href="" class="footer-title">
+                <img src="./assets/images/logo.png" alt="">
+                <span>Blije Dobbelsteen B.V.</span>
+                </a>
+            </div>
+            <div class="footer-section-wrapper">
+                <div class="footer-section">
+                    <h2 class="footer-category">Category</h2>
+                    <nav class="footer-list">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="spellen.html" class="footer-link">Spellen</a></li>
+                        <li><a href="wiezijnwij.html" class="footer-link">Wie zijn wij</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
