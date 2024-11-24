@@ -7,10 +7,53 @@
     <meta name="description" content="CuliPrep bezorgt verse, gezonde maaltijden aan huis. Bereid door professionele chefs en direct bij u thuisbezorgd.">
     <link href="dist/styles.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #000;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Announcement Banner -->
-    <div class="bg-culi text-center py-2">
+    <div class="bg-culi text-center py-2" data-aos="fade-down">
         <p class="text-white text-sm">Gratis bezorging bij je eerste bestelling! 🚚</p>
     </div>
 
@@ -22,10 +65,10 @@
                     <img src="img/culiprep.png" alt="CuliPrep Logo" class="h-12">
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-black transition">Home</a>
-                    <a href="#" class="text-gray-700 hover:text-black transition">Maaltijden</a>
-                    <a href="#" class="text-gray-700 hover:text-black transition">Hoe het werkt</a>
-                    <a href="#" class="text-gray-700 hover:text-black transition">Over ons</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-black transition">Home</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-black transition">Maaltijden</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-black transition">Hoe het werkt</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-black transition">Over ons</a>
                     <div class="flex items-center space-x-4">
                         <a href="#" class="text-gray-700 hover:text-black transition">
                             <i class="fas fa-user"></i>
@@ -33,12 +76,11 @@
                         <a href="#" class="text-gray-700 hover:text-black transition">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <a href="#" class="bg-culi text-gray-800 px-6 py-2 rounded-lg hover:bg-culidark transition duration-300">
+                        <a href="#" class="bg-culi text-gray-800 px-6 py-2 rounded-lg hover:bg-culidark transition duration-300 animate-pulse">
                             Bestellen
                         </a>
                     </div>
                 </div>
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button class="text-gray-700">
                         <i class="fas fa-bars text-2xl"></i>
@@ -54,29 +96,29 @@
             <img src="img/banner.jpg" alt="Healthy Food Background" class="w-full h-full object-cover opacity-50">
         </div>
         <div class="relative max-w-7xl mx-auto py-32 px-4 sm:py-40 sm:px-6 lg:px-8">
-            <div class="space-y-8 max-w-3xl">
+            <div class="space-y-8 max-w-3xl" data-aos="fade-up" data-aos-delay="200">
                 <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
                     Gezonde Maaltijden,<br>
                     <span class="text-culi">Vers Bereid</span> & Bezorgd
                 </h1>
-                <p class="text-xl text-gray-100 max-w-2xl">
+                <p class="text-xl text-gray-100 max-w-2xl" data-aos="fade-up" data-aos-delay="400">
                     Ontdek het gemak van verse, gezonde maaltijden aan huis. Bereid door professionele chefs, perfect voor jouw levensstijl.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="bg-culi text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-culidark transition duration-300">
+                <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#" class="bg-culi text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-culidark transition duration-300 animate-pulse">
                         Begin Nu
                     </a>
                     <a href="#" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-800 transition duration-300">
                         Bekijk Menu
                     </a>
                 </div>
-                <div class="flex space-x-8 pt-8">
+                <div class="flex space-x-8 pt-8" data-aos="fade-up" data-aos-delay="800">
                     <div class="flex items-center">
-                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2 animate-float"></i>
                         <span class="text-white">4.9/5 klantbeoordeling</span>
                     </div>
                     <div class="flex items-center">
-                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        <i class="fas fa-check-circle text-green-400 mr-2 animate-float"></i>
                         <span class="text-white">1000+ tevreden klanten</span>
                     </div>
                 </div>
@@ -84,408 +126,404 @@
         </div>
     </div>
 
-    <!-- Features Section -->
-    <div class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Waarom CuliPrep?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Ontdek waarom steeds meer mensen kiezen voor onze verse maaltijden</p>
+<!-- Features Section -->
+<div class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">Waarom CuliPrep?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Ontdek waarom steeds meer mensen kiezen voor onze verse maaltijden</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="text-center p-8 rounded-xl hover-lift" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-culi/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                    <i class="fas fa-clock text-3xl text-culi"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Tijdbesparend</h3>
+                <p class="text-gray-600">Geen boodschappen doen of koken meer nodig. Wij zorgen voor alles!</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="text-center p-8 rounded-xl hover:shadow-xl transition duration-300">
-                    <div class="bg-culi/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-clock text-3xl text-culi"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Tijdbesparend</h3>
-                    <p class="text-gray-600">Geen boodschappen doen of koken meer nodig. Wij zorgen voor alles!</p>
+            <div class="text-center p-8 rounded-xl hover-lift" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-culi/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                    <i class="fas fa-leaf text-3xl text-culi"></i>
                 </div>
-                <div class="text-center p-8 rounded-xl hover:shadow-xl transition duration-300">
-                    <div class="bg-culi/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-leaf text-3xl text-culi"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">100% Vers</h3>
-                    <p class="text-gray-600">Dagelijks vers bereide maaltijden door onze professionele chefs</p>
+                <h3 class="text-xl font-semibold mb-4">100% Vers</h3>
+                <p class="text-gray-600">Dagelijks vers bereide maaltijden door onze professionele chefs</p>
+            </div>
+            <div class="text-center p-8 rounded-xl hover-lift" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-culi/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                    <i class="fas fa-heart text-3xl text-culi"></i>
                 </div>
-                <div class="text-center p-8 rounded-xl hover:shadow-xl transition duration-300">
-                    <div class="bg-culi/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-heart text-3xl text-culi"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Gezond & Lekker</h3>
-                    <p class="text-gray-600">Uitgebalanceerde voedzame maaltijden die ook nog eens heerlijk smaken</p>
-                </div>
+                <h3 class="text-xl font-semibold mb-4">Gezond & Lekker</h3>
+                <p class="text-gray-600">Uitgebalanceerde voedzame maaltijden die ook nog eens heerlijk smaken</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Menu Section -->
-    <div class="bg-gray-50 py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Onze Populaire Maaltijden</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Ontdek onze bestsellers, dagelijks vers bereid door onze chefs</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Meal Card 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <div class="relative">
-                        <img src="img/zalm.jpg" alt="Zalm met Quinoa" class="w-full h-48 object-cover">
-                        <span class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
-                            Populair
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-2">
-                            <i class="fas fa-leaf text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Rijk aan omega-3</span>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Zalm met Quinoa</h3>
-                        <p class="text-gray-600 mb-4">Gegrilde zalm met quinoa en seizoensgroenten</p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-2xl font-bold">€12,95</span>
-                                <span class="text-gray-500 text-sm ml-2">per portie</span>
-                            </div>
-                            <button class="bg-culi text-gray-800 px-6 py-2 rounded-lg hover:bg-culidark transition duration-300">
-                                Bestellen
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Meal Card 2 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <div class="relative">
-                        <img src="img/teriyaki.jpg" alt="Kip Teriyaki" class="w-full h-48 object-cover">
-                        <span class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
-                            Bestseller
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-2">
-                            <i class="fas fa-dumbbell text-blue-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Rijk aan proteïne</span>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Kip Teriyaki</h3>
-                        <p class="text-gray-600 mb-4">Kip teriyaki met bruine rijst en roerbakgroenten</p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-2xl font-bold">€11,95</span>
-                                <span class="text-gray-500 text-sm ml-2">per portie</span>
-                            </div>
-                            <button class="bg-culi text-gray-800 px-6 py-2 rounded-lg hover:bg-culidark transition duration-300">
-                                Bestellen
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Meal Card 3 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                    <div class="relative">
-                        <img src="img/vegan.jpg" alt="Vegan Bowl" class="w-full h-48 object-cover">
-                        <span class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
-                            Vegetarisch
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-2">
-                            <i class="fas fa-seedling text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">100% plantaardig</span>
-                        </div>
-                        <h3 class="font-semibold text-xl mb-2">Vegan Bowl</h3>
-                        <p class="text-gray-600 mb-4">Buddha bowl met kikkererwten en zoete aardappel</p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-2xl font-bold">€10,95</span>
-                                <span class="text-gray-500 text-sm ml-2">per portie</span>
-                            </div>
-                            <button class="bg-culi text-gray-800 px-6 py-2 rounded-lg hover:bg-culidark transition duration-300">
-                                Bestellen
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block border-2 border-culi text-culi px-8 py-3 rounded-lg hover:bg-culi hover:text-white transition duration-300">
-                    Bekijk Alle Maaltijden
-                </a>
-            </div>
+<!-- Menu Section -->
+<div class="bg-gray-50 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">Onze Populaire Maaltijden</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Ontdek onze bestsellers, dagelijks vers bereid door onze chefs</p>
         </div>
-    </div>
-
-    <!-- How It Works Section -->
-    <div class="bg-white py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Hoe het werkt</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">In drie simpele stappen jouw gezonde maaltijden aan huis</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Meal Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift h-[600px] flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-48 flex-shrink-0">
+                    <img src="img/zalm.jpg" alt="Zalm met Quinoa" class="w-full h-full object-cover">
+                    <span class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                        Populair
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-leaf text-green-500 mr-2 animate-float"></i>
+                        <span class="text-sm text-gray-600">Rijk aan omega-3</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Zalm met Quinoa</h3>
+                    <p class="text-gray-600">Gegrilde zalm met quinoa en seizoensgroenten</p>
+                    <div class="flex justify-between items-center mt-auto pt-6">
+                        <div>
+                            <span class="text-2xl font-bold">€12,95</span>
+                            <span class="text-gray-500 text-sm ml-2">per portie</span>
+                        </div>
+                        <button class="bg-culi text-gray-800 px-6 py-2 rounded-lg hover:bg-culidark transition duration-300 animate-pulse">
+                            Bestellen
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="text-center">
-                    <div class="relative">
-                        <div class="w-16 h-16 bg-culi rounded-full flex items-center justify-center mx-auto mb-6">
-                            <span class="text-2xl font-bold text-white">1</span>
-                        </div>
-                        <div class="hidden md:block absolute top-8 left-full w-full border-t-2 border-dashed border-culi"></div>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Kies je maaltijden</h3>
-                    <p class="text-gray-600">Selecteer uit ons uitgebreide menu van verse, gezonde maaltijden</p>
+
+            <!-- Meal Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift h-[600px] flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative h-48 flex-shrink-0">
+                    <img src="img/teriyaki.jpg" alt="Kip Teriyaki" class="w-full h-full object-cover">
+                    <span class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                        Bestseller
+                    </span>
                 </div>
-                <div class="text-center">
-                    <div class="relative">
-                        <div class="w-16 h-16 bg-culi rounded-full flex items-center justify-center mx-auto mb-6">
-                            <span class="text-2xl font-bold text-white">2</span>
-                        </div>
-                        <div class="hidden md:block absolute top-8 left-full w-full border-t-2 border-dashed border-culi"></div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-dumbbell text-blue-500 mr-2 animate-float"></i>
+                        <span class="text-sm text-gray-600">Rijk aan proteïne</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Wij bereiden</h3>
-                    <p class="text-gray-600">Onze chefs bereiden je maaltijden vers op de dag van bezorging</p>
+                    <h3 class="font-semibold text-xl mb-2">Kip Teriyaki</h3>
+                    <p class="text-gray-600">Kip teriyaki met bruine rijst en roerbakgroenten</p>
+                    <div class="flex justify-between items-center mt-auto pt-6">
+                        <div>
+                            <span class="text-2xl font-bold">€11,95</span>
+                            <span class="text-gray-500 text-sm ml-2">per portie</span>
+                        </div>
+                        <button class="bg-culi text-gray-800 px-6 py-2 rounded-lg hover:bg-culidark transition duration-300 animate-pulse">
+                            Bestellen
+                        </button>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="relative">
-                        <div class="w-16 h-16 bg-culi rounded-full flex items-center justify-center mx-auto mb-6">
-                            <span class="text-2xl font-bold text-white">3</span>
-                        </div>
+            </div>
+
+            <!-- Meal Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift h-[600px] flex flex-col" data-aos="fade-up" data-aos-delay="600">
+                <div class="relative h-48 flex-shrink-0">
+                    <img src="img/vegan.jpg" alt="Vegan Bowl" class="w-full h-full object-cover">
+                    <span class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                        Vegetarisch
+                    </span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-seedling text-green-500 mr-2 animate-float"></i>
+                        <span class="text-sm text-gray-600">100% plantaardig</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Bezorging</h3>
-                    <p class="text-gray-600">Geniet van je verse maaltijden, bezorgd wanneer het jou uitkomt</p>
+                    <h3 class="font-semibold text-xl mb-2">Vegan Bowl</h3>
+                    <p class="text-gray-600">Buddha bowl met kikkererwten en zoete aardappel</p>
+                    <div class="flex justify-between items-center mt-auto pt-6">
+                        <div>
+                            <span class="text-2xl font-bold">€10,95</span>
+                            <span class="text-gray-500 text-sm ml-2">per portie</span>
+                        </div>
+                        <button class="bg-culi text-gray-800 px-6 py-2 rounded-lg hover:bg-culidark transition duration-300 animate-pulse">
+                            Bestellen
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="800">
+            <a href="#" class="inline-block border-2 border-culi text-culi px-8 py-3 rounded-lg hover:bg-culi hover:text-white transition duration-300">
+                Bekijk Alle Maaltijden
+            </a>
+        </div>
     </div>
+</div>
 
-    <!-- Testimonials Section -->
-    <div class="bg-gray-50 py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Wat onze klanten zeggen</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Ontdek waarom duizenden Nederlanders voor CuliPrep kiezen</p>
+<!-- How It Works Section -->
+<div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">Hoe het werkt</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">In drie simpele stappen jouw gezonde maaltijden aan huis</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="text-center" data-aos="fade-right" data-aos-delay="200">
+                <div class="relative">
+                    <div class="w-16 h-16 bg-culi rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <div class="hidden md:block absolute top-8 left-full w-full border-t-2 border-dashed border-culi"></div>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Kies je maaltijden</h3>
+                <p class="text-gray-600">Selecteer uit ons uitgebreide menu van verse, gezonde maaltijden</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Reduced min-height and adjusted spacing -->
-                <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col min-h-[250px]">
-                    <div class="flex items-center mb-3">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="ml-2 text-gray-600">5.0</span>
+            <div class="text-center" data-aos="fade-right" data-aos-delay="400">
+                <div class="relative">
+                    <div class="w-16 h-16 bg-culi rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <span class="text-2xl font-bold text-white">2</span>
                     </div>
-                    <p class="text-gray-600 flex-grow">"Heerlijke maaltijden en super service. Ik ben al 3 maanden klant en het bevalt me uitstekend!"</p>
-                    <div class="flex items-center mt-4">
-                        <img src="img/john.jpg" alt="Klant foto" class="rounded-full h-10 w-10 object-cover">
-                        <div class="ml-4">
-                            <p class="font-semibold">John van der Berg</p>
-                            <p class="text-gray-500 text-sm">Amsterdam</p>
-                        </div>
+                    <div class="hidden md:block absolute top-8 left-full w-full border-t-2 border-dashed border-culi"></div>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Wij bereiden</h3>
+                <p class="text-gray-600">Onze chefs bereiden je maaltijden vers op de dag van bezorging</p>
+            </div>
+            <div class="text-center" data-aos="fade-right" data-aos-delay="600">
+                <div class="relative">
+                    <div class="w-16 h-16 bg-culi rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <span class="text-2xl font-bold text-white">3</span>
                     </div>
                 </div>
-                
-                <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col min-h-[250px]">
-                    <div class="flex items-center mb-3">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="ml-2 text-gray-600">5.0</span>
-                    </div>
-                    <p class="text-gray-600 flex-grow">"Perfect voor mijn drukke levensstijl. Gezond en lekker eten zonder gedoe met boodschappen."</p>
-                    <div class="flex items-center mt-4">
-                        <img src="img/mark.jpg" alt="Klant foto" class="rounded-full h-10 w-10 object-cover">
-                        <div class="ml-4">
-                            <p class="font-semibold">Mark Jansen</p>
-                            <p class="text-gray-500 text-sm">Rotterdam</p>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="text-xl font-semibold mb-4">Bezorging</h3>
+                <p class="text-gray-600">Geniet van je verse maaltijden, bezorgd wanneer het jou uitkomt</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col min-h-[250px]">
-                    <div class="flex items-center mb-3">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="ml-2 text-gray-600">4.5</span>
+<!-- Testimonials Section -->
+<div class="bg-gray-50 py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">Wat onze klanten zeggen</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Ontdek waarom duizenden Nederlanders voor CuliPrep kiezen</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col hover-lift" data-aos="zoom-in" data-aos-delay="200">
+                <div class="flex items-center mb-3">
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 flex-grow">"Eindelijk gezonde maaltijden die ook echt lekker zijn! De variatie is ook super."</p>
-                    <div class="flex items-center mt-4">
-                        <img src="img/emma.jpg" alt="Klant foto" class="rounded-full h-10 w-10 object-cover">
-                        <div class="ml-4">
-                            <p class="font-semibold">Emma de Vries</p>
-                            <p class="text-gray-500 text-sm">Utrecht</p>
-                        </div>
+                    <span class="ml-2 text-gray-600">5.0</span>
+                </div>
+                <p class="text-gray-600 flex-grow">"Heerlijke maaltijden en super service. Ik ben al 3 maanden klant en het bevalt me uitstekend!"</p>
+                <div class="flex items-center mt-4">
+                    <img src="img/john.jpg" alt="Klant foto" class="rounded-full h-10 w-10 object-cover">
+                    <div class="ml-4">
+                        <p class="font-semibold">John van der Berg</p>
+                        <p class="text-gray-500 text-sm">Amsterdam</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col hover-lift" data-aos="zoom-in" data-aos-delay="400">
+                <div class="flex items-center mb-3">
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="ml-2 text-gray-600">5.0</span>
+                </div>
+                <p class="text-gray-600 flex-grow">"Perfect voor mijn drukke levensstijl. Gezond en lekker eten zonder gedoe met boodschappen."</p>
+                <div class="flex items-center mt-4">
+                    <img src="img/mark.jpg" alt="Klant foto" class="rounded-full h-10 w-10 object-cover">
+                    <div class="ml-4">
+                        <p class="font-semibold">Mark Jansen</p>
+                        <p class="text-gray-500 text-sm">Rotterdam</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col hover-lift" data-aos="zoom-in" data-aos-delay="600">
+                <div class="flex items-center mb-3">
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="ml-2 text-gray-600">4.5</span>
+                </div>
+                <p class="text-gray-600 flex-grow">"Eindelijk gezonde maaltijden die ook echt lekker zijn! De variatie is ook super."</p>
+                <div class="flex items-center mt-4">
+                    <img src="img/emma.jpg" alt="Klant foto" class="rounded-full h-10 w-10 object-cover">
+                    <div class="ml-4">
+                        <p class="font-semibold">Emma de Vries</p>
+                        <p class="text-gray-500 text-sm">Utrecht</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- CTA Section -->
-    <div class="bg-culi py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-8">Klaar om gezonder te eten?</h2>
-            <p class="text-xl text-white mb-12 max-w-2xl mx-auto">Begin vandaag nog met CuliPrep en ontvang 15% korting op je eerste bestelling!</p>
-            <div class="flex justify-center space-x-4">
-                <a href="#" class="bg-white text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition duration-300">
-                    Begin Nu
-                </a>
-                <a href="#" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-800 transition duration-300">
-                    Meer Informatie
-                </a>
-            </div>
+</div>
+
+<!-- CTA Section -->
+<div class="bg-culi py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-white mb-8">Klaar om gezonder te eten?</h2>
+        <p class="text-xl text-white mb-12 max-w-2xl mx-auto">Begin vandaag nog met CuliPrep en ontvang 15% korting op je eerste bestelling!</p>
+        <div class="flex justify-center space-x-4">
+            <a href="#" class="bg-white text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition duration-300 animate-pulse">
+                Begin Nu
+            </a>
+            <a href="#" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-800 transition duration-300">
+                Meer Informatie
+            </a>
         </div>
     </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div>
-                    <img src="img/culiprep.png" alt="CuliPrep Logo" class="h-12 mb-6">
-                    <p class="text-gray-300">Gezonde maaltijden aan huis bezorgd in heel Nederland</p>
-                    <div class="flex space-x-4 mt-6">
-                        <a href="#" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-6">Menu</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Maaltijden</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Weekmenu</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Speciale diëten</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Zakelijk</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-6">Service</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Over ons</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Veelgestelde vragen</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-center">
-                            <i class="far fa-envelope mr-3"></i>
-                            info@culiprep.nl
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-3"></i>
-                            085-1234567
-                        </li>
-                        <li class="flex items-center">
-                            <i class="far fa-clock mr-3"></i>
-                            Ma-Vr: 9:00 - 17:00
-                        </li>
-                    </ul>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12" data-aos="fade-up" data-aos-delay="200">
+            <div>
+                <img src="img/culiprep.png" alt="CuliPrep Logo" class="h-12 mb-6">
+                <p class="text-gray-300">Gezonde maaltijden aan huis bezorgd in heel Nederland</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i class="fab fa-facebook-f animate-float"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i class="fab fa-instagram animate-float"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i class="fab fa-linkedin-in animate-float"></i>
+                    </a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400">&copy; 2024 CuliPrep. Alle rechten voorbehouden.</p>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">Algemene voorwaarden</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">Cookiebeleid</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Navigation Menu (Hidden by default) -->
-    <div class="hidden fixed inset-0 z-50 bg-gray-900 bg-opacity-50" id="mobile-menu">
-        <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl">
-            <div class="flex items-center justify-between p-4 border-b">
-                <img src="img/culiprep.png" alt="CuliPrep Logo" class="h-8">
-                <button class="text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-            </div>
-            <nav class="px-4 py-6">
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Menu</h4>
                 <ul class="space-y-4">
-                    <li><a href="#" class="block text-gray-700 hover:text-black">Home</a></li>
-                    <li><a href="#" class="block text-gray-700 hover:text-black">Maaltijden</a></li>
-                    <li><a href="#" class="block text-gray-700 hover:text-black">Hoe het werkt</a></li>
-                    <li><a href="#" class="block text-gray-700 hover:text-black">Over ons</a></li>
-                    <li><a href="#" class="block bg-culi text-gray-800 px-4 py-2 rounded-lg hover:bg-culidark">Bestellen</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition">Maaltijden</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition">Weekmenu</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition">Speciale diëten</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition">Zakelijk</a></li>
                 </ul>
-            </nav>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Service</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-gray-300 hover:text-white transition">Over ons</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition">Veelgestelde vragen</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition">Blog</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-center">
+                        <i class="far fa-envelope mr-3 animate-float"></i>
+                        info@culiprep.nl
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 animate-float"></i>
+                        085-1234567
+                    </li>
+                    <li class="flex items-center">
+                        <i class="far fa-clock mr-3 animate-float"></i>
+                        Ma-Vr: 9:00 - 17:00
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2024 CuliPrep. Alle rechten voorbehouden.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Algemene voorwaarden</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookiebeleid</a>
+                </div>
+            </div>
         </div>
     </div>
+</footer>
 
-    <script>
-        // Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the mobile menu elements
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuButton = document.querySelector('.md\\:hidden button');
-    const closeButton = document.querySelector('#mobile-menu button');
-    
-    // Function to toggle the mobile menu
-    function toggleMobileMenu() {
-        // Check if the menu has 'hidden' class
-        const isHidden = mobileMenu.classList.contains('hidden');
+<!-- Mobile Navigation Menu -->
+<div class="hidden fixed inset-0 z-50 bg-gray-900 bg-opacity-50" id="mobile-menu">
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="img/culiprep.png" alt="CuliPrep Logo" class="h-8">
+            <button class="text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-6">
+            <ul class="space-y-4">
+                <li><a href="#" class="block text-gray-700 hover:text-black">Home</a></li>
+                <li><a href="#" class="block text-gray-700 hover:text-black">Maaltijden</a></li>
+                <li><a href="#" class="block text-gray-700 hover:text-black">Hoe het werkt</a></li>
+                <li><a href="#" class="block text-gray-700 hover:text-black">Over ons</a></li>
+                <li><a href="#" class="block bg-culi text-gray-800 px-4 py-2 rounded-lg hover:bg-culidark animate-pulse">Bestellen</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true,
+            mirror: false
+        });
+
+        // Mobile menu functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuButton = document.querySelector('.md\\:hidden button');
+        const closeButton = document.querySelector('#mobile-menu button');
         
-        // Toggle the menu visibility
-        if (isHidden) {
-            mobileMenu.classList.remove('hidden');
-            // Prevent body scrolling when menu is open
-            document.body.style.overflow = 'hidden';
-        } else {
-            mobileMenu.classList.add('hidden');
-            // Restore body scrolling when menu is closed
-            document.body.style.overflow = 'auto';
+        function toggleMobileMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
         }
-    }
-    
-    // Add click event listeners
-    menuButton.addEventListener('click', toggleMobileMenu);
-    closeButton.addEventListener('click', toggleMobileMenu);
-    
-    // Close menu when clicking outside
-    mobileMenu.addEventListener('click', function(event) {
-        // Check if the click was on the overlay (background) and not the menu itself
-        if (event.target === mobileMenu) {
-            toggleMobileMenu();
-        }
-    });
-    
-    // Close menu on ESC key press
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-            toggleMobileMenu();
-        }
-    });
+        
+        menuButton.addEventListener('click', toggleMobileMenu);
+        closeButton.addEventListener('click', toggleMobileMenu);
+        
+        mobileMenu.addEventListener('click', function(event) {
+            if (event.target === mobileMenu) {
+                toggleMobileMenu();
+            }
+        });
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                toggleMobileMenu();
+            }
+        });
 
-    // Handle window resize
-    window.addEventListener('resize', function() {
-        // If window width is >= 768px (md breakpoint) and menu is open, close it
-        if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
-            toggleMobileMenu();
-        }
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+                toggleMobileMenu();
+            }
+        });
     });
-});
-    </script>
+</script>
 </body>
 </html>
